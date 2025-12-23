@@ -3,7 +3,8 @@
 **Normalizing Remote Work in Panama.**
 We are the on-site ecosystem for Indie Hackers, Freelancers, and Tech Startups. Build your brand, find your tribe, and scale globally.
 
-![Kaizen Ventures Lab Logo](icon/icon.png)
+<img width="500" height="500" alt="icon" src="https://github.com/user-attachments/assets/8af928b5-4eea-4f54-9899-1f72adb0a984" />
+
 
 ## 🚀 Overview in
 This project is the landing page for the **Kaizen Ventures Lab** community. It serves as the central hub for our mission, community pillars, and upcoming events.

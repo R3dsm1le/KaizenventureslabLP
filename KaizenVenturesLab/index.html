@@ -4,27 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaizen Ventures Lab | Remote Work Community Panama</title>
+    <title>Kaizen Ventures Lab | Normalizing Remote Work</title>
     <meta name="description"
-        content="Normalize remote work in Panama. Join the Kaizen Ventures Lab community for indie hackers, freelancers, and tech startups.">
+        content="Kaizen Ventures Lab: Connecting local talent with global opportunities. Building profitable micro-SaaS. Crafting personal brands.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <div class="grid-bg"></div>
 
     <!-- Header -->
     <header>
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="icon/icon.png" alt="Kaizen Ventures Lab" style="height: 80px; vertical-align: middle;">
+                    <img src="icon/icon.png" alt="Kaizen Ventures Lab">
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#about">Mission</a></li>
-                    <li><a href="#pillars">Community</a></li>
-                    <li><a href="events.html" id="events-link">Events</a></li>
-                </ul>
+                <div class="nav-links">
+                    <a href="#pillars">Community Pillars</a>
+                    <a href="#void">The Void</a>
+                    <a href="events.html">Events_Log</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -32,95 +33,125 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h1>Normalizing <br><span class="text-gradient">Remote Work</span> in Panama</h1>
-            <p>We are the on-site ecosystem for Indie Hackers, Freelancers, and Tech Startups. Build your brand, find
-                your tribe, and scale globally.</p>
-            <a href="https://radius.to/groups/kaizen-ventures-lab" class="btn btn-primary" target="_blank">Join the
-                Revolution</a>
+            <div class="pill">Community Protocol v2.0</div>
+            <h1>Normalizing <br><span class="text-gradient">Remote Work.</span></h1>
+            <p>Connecting local talent with global opportunities. Build your brand, find your tribe, and ship your next
+                project from the tropics.</p>
+
+            <div style="margin-top: 40px;">
+                <a href="https://radius.to/groups/kaizen-ventures-lab" class="btn btn-primary" target="_blank">Join the
+                    Lab</a>
+                <a href="#pillars" class="btn btn-glow" style="margin-left: 20px;">Explore Pillars</a>
+            </div>
+
+            <div class="hero-metrics">
+                <div>
+                    <span class="metric-val" style="color: var(--accent-cyan)">Target: 60%</span>
+                    Remote_Workforce
+                </div>
+                <div>
+                    <span class="metric-val" style="color: var(--accent-blue)">Status: Init</span>
+                    Building_Foundation
+                </div>
+                <div>
+                    <span class="metric-val" style="color: var(--accent-purple)">Goal: Global</span>
+                    Economy_Access
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Pillars Section -->
     <section id="pillars" class="pillars">
         <div class="container">
-            <h2 class="section-title">Our <span class="text-gradient">Pillars</span></h2>
-            <div class="grid">
-                <!-- Pillar 1 -->
+            <div class="section-header">
+                <span class="section-label">> kaizen.pillars.load()</span>
+                <h2 class="section-title">Community Core</h2>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Card 1 -->
                 <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div class="card-icon"><i class="fa-solid fa-earth-americas"></i></div>
                     <h3>Remote Job Normalization</h3>
-                    <p>Breaking local barriers. We provide resources, mentorship, and networks to help Panamanian talent
-                        secure global opportunities.</p>
+                    <p>Connecting local talent with global opportunities. We bridge the gap between Panama and the
+                        world's best tech companies.</p>
+                    <div class="card-code">
+                        > connection.establish(global)<br>
+                        <span style="color: var(--success)">Status: Connected</span>
+                    </div>
                 </div>
-                <!-- Pillar 2 -->
+
+                <!-- Card 2 -->
                 <div class="card">
                     <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
                     <h3>Indie Hacker Culture</h3>
-                    <p>Ship fast, validate, and monetize. Join a community of makers building profitable micro-SaaS and
-                        side projects.</p>
+                    <p>Building profitable micro-SaaS and side projects. From ideation to first revenue, we ship
+                        together.</p>
+                    <div class="card-code">
+                        while (true) {<br>
+                        &nbsp;&nbsp;ship_project();<br>
+                        }
+                    </div>
                 </div>
-                <!-- Pillar 3 -->
+
+                <!-- Card 3 -->
                 <div class="card">
-                    <div class="card-icon"><i class="fa-regular fa-id-badge"></i></div>
+                    <div class="card-icon"><i class="fa-solid fa-id-card-clip"></i></div>
                     <h3>Online Branding</h3>
-                    <p>In the digital age, your reputation is your currency. Learn to craft a compelling personal brand
-                        that attracts opportunities.</p>
+                    <p>Crafting compelling personal brands. Your digital footprint is your resume in the new economy.
+                    </p>
+                    <div class="card-code">
+                        Auth: <span style="color: var(--accent-purple)">Verified_Builder</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">The <span class="text-gradient">Mission</span></h2>
-            <p class="about-text">
-                Kaizen Ventures Lab is more than a meetup group; it's a movement. We believe that talent is equally
-                distributed, but opportunity is not.
-                By fostering a culture of continuous improvement (Kaizen) and connecting local talent with the global
-                digital economy,
-                we are redefining what it means to work in tech in Panama.
-            </p>
         </div>
     </section>
 
     <!-- Void of Request Section -->
-    <section id="void-request" style="padding: 100px 0; text-align: center; background: rgba(255, 255, 255, 0.02);">
+    <section id="void" class="void-section">
         <div class="container">
-            <h2 class="section-title">Void of Request <span class="text-gradient">🌌</span></h2>
-            <p class="about-text" style="margin-bottom: 2rem;">
-                Our AI-powered feedback submission system is currently under development. <br>
-                Help us shape the future of the lab by sharing your thoughts directly with our digital brain.
-            </p>
-            <span class="btn btn-primary" style="opacity: 0.7; cursor: not-allowed;">Coming Soon</span>
-        </div>
-    </section>
-
-    <!-- Documentation Section -->
-    <section id="docs" style="padding: 100px 0; text-align: center;">
-        <div class="container">
-            <h2 class="section-title">Our <span class="text-gradient">Manifesto</span></h2>
-            <p class="about-text" style="margin-bottom: 3rem;">
-                Dive deep into our Mission, Vision, and Policy. Understand exactly what we stand for and how we operate.
-            </p>
-            <a href="https://kaizen-ventures-lab.gitbook.io/kaizen-ventures-lab-docs" target="_blank"
-                class="btn btn-primary">
-                Read the Docs <i class="fa-solid fa-book-open" style="margin-left: 10px;"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="logo" style="margin-bottom: 20px;">
-                <img src="icon/icon.png" alt="Kaizen Ventures Lab" style="height: 80px; vertical-align: middle;">
+            <div class="void-box">
+                <h2 style="margin-bottom: 20px;">Void of Request 🌌</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 30px;">
+                    Our AI-powered feedback system is initializing. A space to shape the future of the lab.
+                </p>
+                <div class="pill" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">
+                    <i class="fa-solid fa-spinner fa-spin" style="margin-right: 10px;"></i> System Loading...
+                </div>
             </div>
-            <p>&copy; 2024 Kaizen Ventures Lab. All rights reserved.</p>
-            <div style="margin-top: 20px; font-size: 1.5rem;">
-                <a href="#" style="margin: 0 10px;"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" style="margin: 0 10px;"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" style="margin: 0 10px;"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </section>
+
+    <!-- Events Section Placeholder -->
+    <section id="events" style="padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2rem;">Upcoming Events</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 40px;">Check our timeline for the next meetups.</p>
+            <a href="events.html" class="btn btn-glow">View Event Log</a>
+            <div style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6; font-family: 'JetBrains Mono'">
+                // Syncing with calendar...
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Simplified -->
+    <footer>
+        <div class="container">
+            <div class="footer-btn-container">
+                <a href="https://kaizen-ventures-lab.gitbook.io/kaizen-ventures-lab-docs" target="_blank"
+                    class="btn btn-primary">
+                    <i class="fa-solid fa-book" style="margin-right: 10px;"></i> Read the Docs
+                </a>
+            </div>
+
+            <div class="copyright">
+                <div class="logo" style="margin-bottom: 20px; opacity: 0.7;">
+                    <img src="icon/icon.png" alt="Kaizen Ventures Lab" style="height: 40px; filter: grayscale(1);">
+                </div>
+                &copy; 2024 Kaizen Ventures Lab. <br>
+                Powered by builders, for builders 🇵🇦
             </div>
         </div>
     </footer>

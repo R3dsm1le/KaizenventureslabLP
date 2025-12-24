@@ -1,29 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Reveal on Scroll Animation
-    const revealElements = document.querySelectorAll('.card, .section-title, .about-text');
 
-    const revealOnScroll = () => {
-        const windowHeight = window.innerHeight;
-        const elementVisible = 150;
+    // Spotlight Effect for Cards
+    const cards = document.querySelectorAll('.card');
 
-        revealElements.forEach((element) => {
-            const elementTop = element.getBoundingClientRect().top;
-            if (elementTop < windowHeight - elementVisible) {
-                element.classList.add('active');
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
+    document.addEventListener('mousemove', (e) => {
+        cards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
         });
-    };
-
-    // Initial style for reveal elems
-    revealElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(50px)';
-        el.style.transition = 'all 0.8s ease-out';
     });
 
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // trigger once on load
-});
+    // Simple reveal animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
 
+    document.querySelectorAll('.card, .hero-content').forEach(el => {
+        observer.observe(el);
+    });
+});

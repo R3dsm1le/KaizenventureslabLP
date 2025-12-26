@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /* Cyber/Vercel Palette */
     --bg-color: #000000;
@@ -164,54 +168,7 @@ code,
 }
 
 /* Header */
-header {
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
-    background: rgba(0, 0, 0, 0.7);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo span {
-    font-weight: 800;
-    letter-spacing: -0.05em;
-    font-size: 1.5rem;
-}
-
-.logo img {
-    height: 50px;
-    width: auto;
-    /* Optional: if logo needs brightness adjustment in dark mode */
-    /* filter: brightness(1.2); */
-}
-
-.logo-dot {
-    color: var(--accent-cyan);
-}
-
-.nav-links {
-    display: flex;
-    gap: 32px;
-}
-
-.nav-links a {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: var(--text-color);
-}
+/* Header Removed */
 
 /* Hero Section */
 .hero {
@@ -220,7 +177,7 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 60px;
     /* Add bottom padding to prevent overlap */
     position: relative;
@@ -256,6 +213,15 @@ nav {
     color: var(--text-color);
     font-weight: 700;
     margin-bottom: 5px;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* Bento Grid / Pillars */
@@ -409,4 +375,45 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+        /* Constrain width for better look */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        /* Make buttons same width */
+        text-align: center;
+    }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
 }

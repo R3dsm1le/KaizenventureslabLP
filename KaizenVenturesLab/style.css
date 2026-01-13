@@ -527,3 +527,26 @@ footer {
         /* Expands outward */
     }
 }
+
+@media (max-width: 900px) {
+
+    /* Optimize Launch Card for Mobile - Remove Animations */
+    .launch-card,
+    .launch-card:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: var(--border-color);
+        cursor: default;
+    }
+
+    .launch-card:hover .launch-image {
+        transform: none;
+    }
+
+    /* Disable confetti */
+    .launch-card::before,
+    .launch-card::after {
+        display: none;
+        animation: none;
+    }
+}

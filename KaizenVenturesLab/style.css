@@ -322,20 +322,111 @@ code,
     border: 1px solid var(--border-color);
 }
 
-/* Void of Request */
-.void-section {
+/* Events Section */
+.events-section {
     padding: 100px 0;
-    text-align: center;
-    background: radial-gradient(circle at center, rgba(121, 40, 202, 0.1), transparent 70%);
 }
 
-.void-box {
-    border: 1px dashed var(--text-tertiary);
-    border-radius: 12px;
-    padding: 60px;
-    background: rgba(0, 0, 0, 0.5);
-    max-width: 800px;
+/* Parent Card Container */
+.events-parent-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.events-parent-card:hover {
+    border-color: var(--border-hover);
+}
+
+/* Top Poster Placeholder */
+.event-poster {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed var(--border-color);
+    border-radius: 12px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.poster-content {
+    text-align: center;
+    color: var(--text-tertiary);
+    font-family: 'JetBrains Mono', monospace;
+    padding: 20px;
+}
+
+.event-poster:hover {
+    border-color: var(--accent-purple);
+    background: rgba(121, 40, 202, 0.05);
+}
+
+/* Inner Grid for Bottom Cards */
+.events-grid-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* Base card styling tweaks for inside grid */
+.event-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    padding: 30px;
+    background: #000;
+    /* Slightly darker than parent */
+}
+
+.event-card .card-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    border-radius: 12px;
+}
+
+.event-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.luma-bg {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    padding: 15px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.luma-bg img {
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .events-grid-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .events-parent-card {
+        padding: 16px;
+    }
 }
 
 /* Footer - Simplified */
@@ -393,30 +484,7 @@ footer {
     }
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25d366;
-    color: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.whatsapp-float:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.6);
-}
 
 /* Launch Section Styling */
 .launch-section {
